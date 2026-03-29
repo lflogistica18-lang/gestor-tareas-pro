@@ -49,10 +49,6 @@ export function DayNavigator({ selectedDate, onDateChange }: DayNavigatorProps) 
   }
 
   const todayStr = getLocalDateString(new Date())
-  const yesterday = new Date()
-  yesterday.setDate(yesterday.getDate() - 1)
-  const tomorrow = new Date()
-  tomorrow.setDate(tomorrow.getDate() + 1)
 
   let labelBase = current.toLocaleDateString('es-ES', {
     weekday: 'long',
@@ -61,14 +57,7 @@ export function DayNavigator({ selectedDate, onDateChange }: DayNavigatorProps) 
   })
   labelBase = labelBase.charAt(0).toUpperCase() + labelBase.slice(1)
 
-  let label = labelBase
-  if (selectedDate === todayStr) {
-    label = `Hoy - ${labelBase}`
-  } else if (selectedDate === getLocalDateString(yesterday)) {
-    label = `Ayer - ${labelBase}`
-  } else if (selectedDate === getLocalDateString(tomorrow)) {
-    label = `Mañana - ${labelBase}`
-  }
+  const label = selectedDate === todayStr ? 'Hoy' : labelBase
 
   const isToday = selectedDate === todayStr
 
