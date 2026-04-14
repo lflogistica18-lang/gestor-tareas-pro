@@ -20,7 +20,7 @@ export function DayNavigator({ selectedDate, onDateChange }: DayNavigatorProps) 
   const dateInputRef = useRef<HTMLInputElement>(null)
 
   // Parse selectedDate de forma segura asumiendo la timezone local
-  const [year, month, day] = selectedDate.split('-').map(Number)
+  const [year, month, day] = selectedDate.split('-').map(Number) as [number, number, number]
   const current = new Date(year, month - 1, day)
 
   const goBack = () => {

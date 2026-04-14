@@ -1,0 +1,26 @@
+{
+  "name": "Gestor de Tareas Pro",
+  "short_name": "Tareas Pro",
+  "description": "Organiza tus tareas laborales, de estudio y personales.",
+  "start_url": "/panel/laboral",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f0fdfa",
+  "theme_color": "#115e59",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "es"
+}
